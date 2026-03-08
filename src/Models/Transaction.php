@@ -6,25 +6,38 @@ namespace Akira\Sisp\Models;
 
 use Akira\Sisp\Enums\TransactionStatus;
 use Akira\Sisp\Traits\EncryptsAttributes;
+use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 /**
- * @property-read  int $id
- * @property-read  TransactionStatus $status
- * @property-read  array $payload
- * @property-read  string $customer_email
- * @property-read  string $merchant_ref
- * @property-read  int $transaction_id
- * @property-read  string $locale
- * @property-read  string $customer_name
- * @property-read  string $customer_phone
- * @property-read  string $customer_country
- * @property-read  string $customer_city
- * @property-read  string $customer_address
- * @property-read  int|float $amount
+ * @property int $id
+ * @property string $merchant_ref
+ * @property string $merchant_session
+ * @property float $amount
+ * @property string $currency
+ * @property TransactionStatus $status
+ * @property string|null $transaction_code
+ * @property string|null $transaction_id
+ * @property string|null $message_type
+ * @property string|null $response_code
+ * @property string|null $merchant_response
+ * @property string|null $fingerprint
+ * @property array<string, mixed>|null $payload
+ * @property string|null $customer_name
+ * @property string|null $customer_email
+ * @property string|null $customer_phone
+ * @property string|null $customer_country
+ * @property string|null $customer_city
+ * @property string|null $customer_address
+ * @property string|null $customer_postal_code
+ * @property string $locale
+ * @property CarbonInterface|null $cancelled_at
+ * @property CarbonInterface|null $refunded_at
+ * @property CarbonInterface $created_at
+ * @property CarbonInterface $updated_at
  */
 final class Transaction extends Model
 {
