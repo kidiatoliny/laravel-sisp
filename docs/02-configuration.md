@@ -87,7 +87,7 @@ SISP_USE_BLADE=true
 SISP_USE_INERTIA=false
 ```
 
-Renders payment forms using Blade templates.
+Renders payment forms using package-scoped Blade templates (`sisp::...`), so no host `layouts.app` file is required.
 
 ### Inertia.js
 

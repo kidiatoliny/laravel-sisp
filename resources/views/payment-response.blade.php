@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('sisp::layouts.app')
 
 @section('content')
 <div class="flex min-h-screen items-center justify-center bg-background">

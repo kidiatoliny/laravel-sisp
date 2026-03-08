@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('sisp::layouts.app')
 
 @section('content')
 <div class="sisp-payment-container flex flex-col items-center justify-center min-h-[50vh] py-12 text-center">
