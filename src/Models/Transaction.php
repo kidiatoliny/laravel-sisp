@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
  * @property-read  int $id
  * @property-read  TransactionStatus $status
  * @property-read  array $payload
- * @property-read  string $customer_email
+ * @property-read  string|null $customer_email
  * @property-read  string $merchant_ref
  * @property-read  int $transaction_id
  * @property-read  string $locale
