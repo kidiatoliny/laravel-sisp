@@ -321,7 +321,7 @@ SISP_INERTIA_CALLBACK_COMPONENT=my-payment-response
 
 ### Can I customize the payment form styling?
 
-With Blade, modify the published views in `resources/views/vendor/sisp/`.
+With Blade, modify the published views in `resources/views/vendor/sisp/`. Package templates use namespaced layout/components (for example `@extends('sisp::layouts.app')` and `<x-sisp::layouts.app>`), so host `layouts.app` is not required.
 
 With Inertia, create your own component and pass it in configuration.
 
